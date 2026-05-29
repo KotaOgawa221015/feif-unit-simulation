@@ -1,5 +1,5 @@
 import { Hono } from 'hono'
-import { html } from 'hono/html'
+import { html, raw } from 'hono/html'
 import { serve } from '@hono/node-server'
 const app = new Hono()
 
@@ -105,7 +105,7 @@ app.get('/', (c) => {
 
   <script>
     // モックデータの読み込み
-    const data = ${JSON.stringify(mockData)};
+    const data = ${raw(JSON.stringify(mockData))};
 
     // 全ての選択肢を平坦化（検索予測用）
     const allSkills = [];
