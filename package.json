@@ -2,6 +2,7 @@
   "name": "hono",
   "type": "module",
   "dependencies": {
+    "@hono/node-server": "^2.0.4",
     "hono": "^4.12.23"
   },
   "devDependencies": {
@@ -11,6 +12,7 @@
     "vercel": "^54.5.1"
   },
   "scripts": {
+    "dev": "tsx watch src/index.tsx",
     "start": "vercel dev",
     "deploy": "vercel"
   }

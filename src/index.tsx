@@ -1,6 +1,6 @@
 import { Hono } from 'hono'
 import { html } from 'hono/html'
-
+import { serve } from '@hono/node-server'
 const app = new Hono()
 
 // モックデータの定義
@@ -274,6 +274,14 @@ app.get('/', (c) => {
 </body>
 </html>`
   )
+})
+
+const port = 3000
+console.log(`Server is running on http://localhost:${port}`)
+
+serve({
+  fetch: app.fetch,
+  port
 })
 
 export default app
