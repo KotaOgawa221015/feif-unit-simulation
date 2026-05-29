@@ -1,7 +1,7 @@
 import { Hono } from 'hono'
 import { html, raw } from 'hono/html'
 import { serve } from '@hono/node-server'
-import { mockData } from './seed.js' // ★ seed.js（TypeScript上は同名の.ts）からインポート
+import { mockData } from './seed.js' 
 import { TitleScreen } from './components/TitleScreen.js'
 import { SearchScreen } from './components/SearchScreen.js'
 import { ResultScreen } from './components/ResultScreen.js'
