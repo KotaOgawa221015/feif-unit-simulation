@@ -77,7 +77,9 @@ app.get('/', (c) => {
 
       if (filtered.length > 0) {
         suggestBox.innerHTML = filtered.map(item => 
-          \`<div class="p-2 hover:bg-blue-50 cursor-pointer text-sm border-b last:border-0" onclick="selectSuggest('\${inputId}', '\${suggestId}', '\${item}')">\${item}</div>\`
+          \`<div class="p-2 hover:bg-blue-50 cursor-pointer text-sm border-b last:border-0" 
+          onclick="selectSuggest('\${inputId}', '\${suggestId}', '\${item}')"
+          >\${item}</div>\`
         ).join('');
         suggestBox.classList.remove('hidden');
       } else {
@@ -91,9 +93,14 @@ app.get('/', (c) => {
     }
 
     document.addEventListener('click', (e) => {
-      if (!e.target.closest('.relative')) {
-        document.querySelectorAll('[id^="suggest-"]').forEach(box => box.classList.add('hidden'));
-      }
+      document.querySelectorAll('[id^="suggest-"]').forEach(box => {
+        const wrapper = box.parentElement;
+        const input = wrapper.querySelector('input');
+
+        if (e.target !== input && !box.contains(e.target)) {
+          box.classList.add('hidden');
+        }
+      });
     });
 
     function processSearch() {
