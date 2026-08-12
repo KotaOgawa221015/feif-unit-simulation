@@ -46,7 +46,7 @@
         <mxCell id="class_promotion" parent="1" style="shape=table;startSize=30;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=1;fontStyle=1;align=center;html=1;" value="class_promotion" vertex="1">
           <mxGeometry height="120" width="260" x="700" y="40" as="geometry" />
         </mxCell>
-        <mxCell id="promotion_from" parent="class_promotion" style="shape=partialRectangle;connectable=0;overflow=hidden;whiteSpace=wrap;html=1;" value="PK,FK1  from_class_id → fe_class.id" vertex="1">
+        <mxCell id="promotion_from" parent="class_promotion" style="shape=partialRectangle;connectable=0;overflow=hidden;whiteSpace=wrap;html=1;" value="PK,FK1  from_class_id&amp;nbsp;" vertex="1">
           <mxGeometry height="30" width="260" y="30" as="geometry" />
         </mxCell>
         <mxCell id="promotion_to" parent="class_promotion" style="shape=partialRectangle;connectable=0;overflow=hidden;whiteSpace=wrap;html=1;" value="PK,FK2  to_class_id → fe_class.id" vertex="1">
@@ -88,10 +88,10 @@
         <mxCell id="class_skill" parent="1" style="shape=table;startSize=30;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=1;fontStyle=1;align=center;html=1;" value="class_skill" vertex="1">
           <mxGeometry height="120" width="280" x="680" y="330" as="geometry" />
         </mxCell>
-        <mxCell id="cs_class" parent="class_skill" style="shape=partialRectangle;connectable=0;overflow=hidden;whiteSpace=wrap;html=1;" value="PK,FK1  fe_class_id → fe_class.id" vertex="1">
+        <mxCell id="cs_class" parent="class_skill" style="shape=partialRectangle;connectable=0;overflow=hidden;whiteSpace=wrap;html=1;" value="PK,FK1  fe_class_id" vertex="1">
           <mxGeometry height="30" width="280" y="30" as="geometry" />
         </mxCell>
-        <mxCell id="cs_skill" parent="class_skill" style="shape=partialRectangle;connectable=0;overflow=hidden;whiteSpace=wrap;html=1;" value="PK,FK2  skill_id → skill.id" vertex="1">
+        <mxCell id="cs_skill" parent="class_skill" style="shape=partialRectangle;connectable=0;overflow=hidden;whiteSpace=wrap;html=1;" value="PK,FK2  skill_id" vertex="1">
           <mxGeometry height="30" width="280" y="60" as="geometry" />
         </mxCell>
         <mxCell id="cs_level" parent="class_skill" style="shape=partialRectangle;connectable=0;overflow=hidden;whiteSpace=wrap;html=1;" value="required_level" vertex="1">
